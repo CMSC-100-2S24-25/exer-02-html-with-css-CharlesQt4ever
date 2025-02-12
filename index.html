@@ -1,15 +1,183 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <title>Sample Web Page</title>
-    </head>
-    
-    <body>
-        <h1>This is a heading</h1>
-        <p>This is the first paragraph of text</p>
-        <hr />
-        <p>This is the second paragraph of text</p>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Charles Andrei P. De los Reyes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 32px;
+            font-weight: bold;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            background: #222;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px 20px;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background: #444;
+        }
+        section {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        img.profile {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-top: 20px;
+            border: 4px solid #2a5298;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #1e3c72;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .skills li {
+            background: #2a5298;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .skills li:hover {
+            background: #1e3c72;
+        }
+        .project {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+        }
+        .project img {
+            width: 100%;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .project img:hover {
+            transform: scale(1.05);
+        }
+        .contact {
+            background: #2a5298;
+            color: #f4f4f4;
+            padding: 40px;
+            font-size: 18px;
+            text-align: center;
+        }
+        .contact p {
+            margin: 10px 0;
+        }
+        .back-to-top {
+            margin-top: 15px;
+            padding: 12px 25px;
+            background: #2a5298;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+            font-size: 18px;
+        }
+        .back-to-top:hover {
+            background: #1e3c72;
+        }
+        #about p {
+        font-size: 20px; /* Adjust as needed */
+        line-height: 1.8;
+        }
 
+    </style>
+</head>
+<body>
+    <header>Charles Andrei P. De los Reyes - Portfolio</header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <img src="images/profile.jpg" alt="Profile Photo" class="profile">
+        <h2>About Me</h2>
+        <p>I am Charles Andrei P. De los Reyes. I am a graduating computer science student at the University of the Philippines Los Banos. </p>
+        <p>My curiosity started with coding because of the algorithm in social media that always shows me content related to coding. </p>
+        <p>My interests in the industry include machine learning, cybersecurity, mobile, and game development. </p>
+        <p>Aside from coding, I like to play table tennis, play board games, and watch movies in my free time.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Responsive Design</li>
+                <li>Project Management</li>
+            </ul>
+        </div>
+    </section>
+    <section id="project">
+        <h2>Featured Project</h2>
+        <div class="project">
+            <img src="images/pixel-fighter.png" alt="Pixel Fighter Screenshot">
+            <h3>Pixel Fighter</h3>
+            <p>A 1v1 fighting game in JavaFX.</p>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: cpdelosreyes@up.edu.ph</p>
+        <p>Mobile: (+63) 915 868 7100</p>
+        <p>Copyright © 2025 Charles De los Reyes. All rights reserved.</p>
+        <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to Top</button>
+    </section>
+</body>
 </html>
